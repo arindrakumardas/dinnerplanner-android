@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <!-- @TODO: the position of "total cost" and "ingredients" should change according to content -->
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:text="@string/cost" />
+    
+    <ImageView
+        android:id="@+id/left_arrow"
+        android:layout_width="80dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/back_btn"	/>
+        
+   
+    <Button
+        android:id="@+id/back_button"
+        android:layout_width="80dp"
+        android:layout_height="20dp"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/back_btn" />
+    
+   <TextView
+        android:id="@+id/instructions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/instructions" />
+   <!--    android:layout_above=""	-->
+    
+    <TextView
+        android:id="@+id/ing_sum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:text="@string/ingredients" />
+
+</RelativeLayout>

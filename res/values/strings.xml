@@ -12,5 +12,7 @@
         On the next page start by selecting number of participants.\n
         Then select your courses.\n\n
         Watch Magic Happen!</string>
+    <string name="ingredients">Ingredients</string>
+    <string name="instructions">Instructions</string>
 
 </resources>
