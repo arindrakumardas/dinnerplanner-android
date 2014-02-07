@@ -30,7 +30,7 @@
         android:text="@string/participants" />
     
     <TextView
-        android:id="@+id/textView02"
+        android:id="@+id/TextView02"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/TextView01"
@@ -38,27 +38,26 @@
         android:text="@string/choose_menu" />
 
     <TextView
-        android:id="@+id/textView03"
+        android:id="@+id/TextView03"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/TextView02"
-        android:layout_marginTop="150dp"
         android:text="@string/starter" />
 
     <TextView
-        android:id="@+id/textView04"
+        android:id="@+id/TextView04"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/TextView03"
-        android:layout_marginTop="250dp"
+        android:layout_marginTop="100dp"
         android:text="@string/main_course" />
     
     <TextView
-        android:id="@+id/textView05"
+        android:id="@+id/TextView05"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/TextView04"
-        android:layout_marginTop="350dp"
+        android:layout_marginTop="100dp"
         android:text="@string/dessert" />
 
     <Button
