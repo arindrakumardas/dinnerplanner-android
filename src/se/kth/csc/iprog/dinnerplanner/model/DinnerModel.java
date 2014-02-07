@@ -14,10 +14,21 @@ public class DinnerModel {
 	 * for the dinner planner (number of guests, selected dishes, etc.). 
 	 */
 	
+	private int numberofGuests;
+	private int TotalMenuPrice;
+	
 	
 	/**
 	 * The constructor of the overall model. Set the default values here
 	 */
+	
+	public DinnerModel(String name){
+		numberofGuests = 3;
+		TotalMenuPrice = 0;
+	}
+	
+	
+	
 	public DinnerModel(){
 		
 		//Adding some example data, you can add more
