@@ -10,8 +10,10 @@ import android.widget.TextView;
 public class ExampleView {
 
 	View view;
+	DinnerModel dm;
 
 	public ExampleView(View view) {
+		dm = new DinnerModel();
 
 		// store in the class the reference to the Android View
 		this.view = view;
@@ -20,7 +22,7 @@ public class ExampleView {
 		//example.setText("Hello world");
 		example.setMaxValue(9);
 		example.setMinValue(0);
-        example.setValue(3);
+        example.setValue(dm.numberOfGuests);
         example.setOnValueChangedListener((OnValueChangeListener) this);
 		
 		

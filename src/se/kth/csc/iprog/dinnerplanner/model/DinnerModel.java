@@ -14,20 +14,13 @@ public class DinnerModel {
 	 * for the dinner planner (number of guests, selected dishes, etc.). 
 	 */
 	
-	private int numberofGuests;
-	private int TotalMenuPrice;
+	public int numberOfGuests;
+	public int TotalMenuPrice;
 	
 	
 	/**
 	 * The constructor of the overall model. Set the default values here
 	 */
-	
-	public DinnerModel(String name){
-		numberofGuests = 3;
-		TotalMenuPrice = 0;
-	}
-	
-	
 	
 	public DinnerModel(){
 		
@@ -69,6 +62,9 @@ public class DinnerModel {
 		dish2.addIngredient(dish2ing10);
 		dish2.addIngredient(dish2ing11);
 		dishes.add(dish2);
+		
+		numberOfGuests = 3;
+		TotalMenuPrice = 0;
 		
 	}
 	
