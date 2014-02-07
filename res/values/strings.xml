@@ -12,11 +12,9 @@
         On the next page start by selecting number of participants.\n
         Then select your courses.\n\n
         Watch Magic Happen!</string>
-<<<<<<< HEAD
+    <string name="persons">4 persons</string>    
     <string name="ingredients">Ingredients</string>
     <string name="instructions">Instructions</string>
-
-=======
     <string name="choose_menu">Choose Menu</string>
     <string name="starter">Starter</string>
     <string name="main_course">Main Course</string>
@@ -29,5 +27,5 @@
 	<string name="meatballs">Meatballs</string>
 	<string name="choosebutton">Choose</string>
 	<string name="individual_cost">Cost: 80kr \n (20kr / Person)</string>
->>>>>>> origin/menu_view
+	<string name="ingredientssummary">Beef  1200 gr \nTomatoes  200 gr \n Bread  2 loafs \n Sallad  100 gr \n Cheese  650 gr</string>
 </resources>

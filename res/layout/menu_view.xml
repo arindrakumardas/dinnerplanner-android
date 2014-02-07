@@ -11,12 +11,14 @@
     android:orientation="vertical" 
     tools:context=".view.MenuView" >
 
-    <NumberPicker
-        android:id="@+id/numberPicker1"
+   
+    <TextView
+        android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_toRightOf="@+id/numberPicker1"
+        android:text="@string/cost" />
 
     <TextView
         android:id="@+id/TextView01"
@@ -25,13 +27,40 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:text="@string/participants" />
-
+    
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/TextView02"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:text="@string/cost" />
+        android:layout_below="@+id/TextView01"
+        android:layout_marginTop="100dp"
+        android:text="@string/choose_menu" />
 
+   
+    <TextView
+        android:id="@+id/TextView04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TextView03"
+        android:layout_marginTop="100dp"
+        android:text="@string/main_course" />
+    
+    <TextView
+        android:id="@+id/TextView05"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TextView04"
+        android:layout_marginTop="100dp"
+        android:text="@string/dessert" />
+
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:text="@string/createbutton" />
+   
 </RelativeLayout>

@@ -73,4 +73,23 @@
         android:text="@string/ingredients"
         android:textSize="30sp" />
 
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ing_sum"
+        android:layout_below="@+id/ing_sum"
+        android:layout_marginTop="14dp"
+        android:text="@string/ingredientssummary" />
+
+    <TextView
+        android:id="@+id/TextView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/ing_sum"
+        android:layout_alignBottom="@+id/ing_sum"
+        android:layout_alignRight="@+id/imageView3"
+        android:text="@string/persons"
+        android:textSize="15sp" />
+
 </RelativeLayout>
