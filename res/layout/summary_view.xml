@@ -8,41 +8,69 @@
     
     <!-- @TODO: the position of "total cost" and "ingredients" should change according to content -->
 
+   <!--    android:layout_above=""	-->
+
+    <ImageView
+        android:id="@+id/left_arrow"
+        android:layout_width="140dp"
+        android:layout_height="60dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/back_btn" />
+
     <TextView
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:text="@string/cost" />
-    
-    <ImageView
-        android:id="@+id/left_arrow"
-        android:layout_width="80dp"
-        android:layout_height="20dp"
-        android:layout_gravity="center_horizontal"
-        android:src="@drawable/back_btn"	/>
-        
-   
-    <Button
-        android:id="@+id/back_button"
-        android:layout_width="80dp"
-        android:layout_height="20dp"
-        android:layout_alignParentLeft="true"
-        android:src="@drawable/back_btn" />
-    
-   <TextView
+        android:layout_alignBottom="@+id/left_arrow"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="26dp"
+        android:layout_toRightOf="@+id/left_arrow"
+        android:text="@string/cost"
+        android:textSize="20sp" />
+
+    <TextView
         android:id="@+id/instructions"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/left_arrow"
+        android:layout_centerHorizontal="true"
         android:text="@string/instructions" />
-   <!--    android:layout_above=""	-->
-    
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignLeft="@+id/instructions"
+        android:layout_alignTop="@+id/imageView1"
+        android:src="@drawable/meatballs" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignTop="@+id/imageView2"
+        android:layout_marginLeft="14dp"
+        android:layout_toRightOf="@+id/imageView2"
+        android:src="@drawable/toast" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignLeft="@+id/ing_sum"
+        android:layout_below="@+id/instructions"
+        android:layout_marginTop="26dp"
+        android:src="@drawable/bakedbrie" />
+
     <TextView
         android:id="@+id/ing_sum"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
         android:layout_centerVertical="true"
-        android:text="@string/ingredients" />
+        android:layout_marginLeft="16dp"
+        android:text="@string/ingredients"
+        android:textSize="30sp" />
 
 </RelativeLayout>
