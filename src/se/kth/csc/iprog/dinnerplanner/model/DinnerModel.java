@@ -110,7 +110,12 @@ public class DinnerModel implements IDinnerModel {
 
 	@Override
 	public Dish getSelectedDish(int type) {
-		return (Dish) dishes.toArray()[type];
+		for(Dish dish : getFullMenu()) {
+			if(dish.getType() == type) {
+				return dish;
+			}
+		}
+		return null;
 	}
 
 	@Override
