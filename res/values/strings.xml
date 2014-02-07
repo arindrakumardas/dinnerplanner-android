@@ -17,6 +17,11 @@
     <string name="main_course">Main Course</string>
     <string name="dessert">Dessert</string>
     <string name="createbutton">Create</string>
-    
-
+    <string name="bakedbrie">Bakedbrie</string>
+    <string name="icecream">Icecream</string>
+    <string name="toast">Toast</string>
+	<string name="sourdough">Sourdough</string>
+	<string name="meatballs">Meatballs</string>
+	<string name="choosebutton">Choose</string>
+	<string name="individual_cost">Cost: 80kr \n (20kr / Person)</string>
 </resources>
