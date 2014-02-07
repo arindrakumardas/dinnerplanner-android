@@ -8,17 +8,17 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity" >
 
-    <include
-        android:id="@+id/include1"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/example_text"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        layout="@layout/example_view" />
-
+        android:text="@string/start_string" />
+    
     <Button
         android:id="@+id/start_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/include1"
+        android:layout_below="@+id/example_text"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="116dp"
         android:text="@string/startbutton" />
