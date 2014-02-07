@@ -25,7 +25,7 @@
         </activity>
         <activity
             android:label="@string/app_name"
-            android:name=".MainActivity2" >
+            android:name=".StartButton" >
         </activity>
     </application>
 

@@ -11,7 +11,7 @@ import android.content.Intent;
 
 public class MainActivity extends Activity {
 
-	Button aButton;
+	Button startButton;
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,12 +29,10 @@ public class MainActivity extends Activity {
         // setContentView(R.layout.activity_main);
         
     	//Button in activity_main view
-    	aButton = (Button) this.findViewById(R.id.button1);
-    	aButton.setOnClickListener(new OnClickListener() {
+    	startButton = (Button) this.findViewById(R.id.start_button);
+    	startButton.setOnClickListener(new OnClickListener() {
     		public void onClick(View v) {
-    		//aButton.setText("You Clicked Me");
-    			Intent intent = new Intent(getBaseContext(), MainActivity2.class);
-                startActivity(intent); 	
+    			setContentView(R.layout.menu_view);
     		}}); 
 
     	
