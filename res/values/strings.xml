@@ -7,5 +7,10 @@
     <string name="participants">Participants</string>
     <string name="cost">Total Cost</string>
     <string name="startbutton">Start</string>
+    <string name="start_string">Welcome to Dinner Planner!\n\n
+        Here you will be able to easily plan your dinner.\n\n
+        On the next page start by selecting number of participants.\n
+        Then select your courses.\n\n
+        Watch Magic Happen!</string>
 
 </resources>
