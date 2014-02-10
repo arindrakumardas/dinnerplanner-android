@@ -27,9 +27,11 @@
 	<string name="meatballs">Meatballs</string>
 	<string name="choosebutton">Choose</string>
 	<string name="individual_cost">Cost: 80kr \n (20kr / Person)</string>
-<<<<<<< HEAD
+
 	<string name="ingredientssummary">Beef  1200 gr \nTomatoes  200 gr \n Bread  2 loafs \n Sallad  100 gr \n Cheese  650 gr</string>
-=======
+
 	<string name="number_of_guests">Choose the number of guests</string>
->>>>>>> origin/menu_view
+
 </resources>
+
+

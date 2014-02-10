@@ -13,6 +13,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
         android:text="@string/bakedbrie" />
+ 
   <ImageView
       android:id="@+id/bakedbrie"
       android:layout_width="wrap_content"
@@ -21,6 +22,7 @@
       android:layout_marginTop="20dp"
       android:layout_marginLeft="40dp"
       android:src="@drawable/bakedbrie" />
+  
   <TextView
         android:id="@+id/cost"
         android:layout_width="wrap_content"
