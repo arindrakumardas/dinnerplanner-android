@@ -30,11 +30,12 @@ public class MainActivity extends Activity {
     	//Button in activity_main view
     	startButton = (Button) this.findViewById(R.id.start_button);
     	startButton.setOnClickListener(new OnClickListener() {
-    		public void onClick(View v) {
-    			setContentView(R.layout.menu_view);
-    		}}); 
-
-    	
+			@Override
+			public void onClick(View arg0) {
+				Intent i = new Intent(MainActivity.this, MenuActivity.class);
+	    		startActivity(i);
+			}
+    	});
     	
     }
 
