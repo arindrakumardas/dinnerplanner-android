@@ -10,20 +10,19 @@
 
    <!--    android:layout_above=""	-->
 
-    <ImageView
-        android:id="@+id/left_arrow"
-        android:layout_width="140dp"
+    <Button
+        android:id="@+id/back_button"
+        android:layout_width="120dp"
         android:layout_height="60dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:src="@drawable/back_btn" />
-    
+        android:background="@drawable/back_btn" />
 
     <TextView
         android:id="@+id/instructions"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/left_arrow"
+        android:layout_below="@+id/back_button"
         android:layout_centerHorizontal="true"
         android:text="@string/instructions" />
 
@@ -81,5 +80,6 @@
         android:layout_marginBottom="14dp"
         android:text="@string/cost"
         android:textSize="20sp" />
+
 
 </RelativeLayout>
