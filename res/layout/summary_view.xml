@@ -17,26 +17,6 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:src="@drawable/back_btn" />
-
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/left_arrow"
-        android:layout_marginBottom="15dp"
-        android:layout_marginLeft="26dp"
-        android:layout_toRightOf="@+id/left_arrow"
-        android:text="@string/cost"
-        android:textSize="20sp" />
-    
-    <TextView
-        android:id="@+id/totalCost"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/textView1"
-        android:layout_alignBottom="@+id/textView1"
-        android:textSize="20sp"
-        android:text="@string/sumCost" />
     
 
     <TextView
@@ -48,58 +28,56 @@
         android:text="@string/instructions" />
 
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_alignLeft="@+id/instructions"
-        android:layout_alignTop="@+id/imageView1"
-        android:src="@drawable/meatballs" />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_alignTop="@+id/imageView2"
-        android:layout_marginLeft="14dp"
-        android:layout_toRightOf="@+id/imageView2"
-        android:src="@drawable/toast" />
-
-    <ImageView
-        android:id="@+id/imageView1"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_alignLeft="@+id/ing_sum"
+        android:id="@+id/selected_instructions"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+		android:gravity="left"
         android:layout_below="@+id/instructions"
+        android:layout_marginLeft="14dp"
         android:layout_marginTop="26dp"
         android:src="@drawable/bakedbrie" />
 
-    <TextView
-        android:id="@+id/ing_sum"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="16dp"
-        android:text="@string/ingredients"
-        android:textSize="30sp" />
+    <ImageView
+        android:id="@+id/selected_main"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignTop="@+id/selected_starter"
+        android:layout_toRightOf="@+id/selected_starter"
+        android:src="@drawable/meatballs" />
+
+    <ImageView
+        android:id="@+id/selected_dessert"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignTop="@+id/selected_main"
+        android:layout_toRightOf="@+id/selected_main"
+        android:src="@drawable/toast" />
+
+    <ImageView
+        android:id="@+id/selected_starter"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignTop="@+id/selected_instructions"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/bakedbrie" />
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/selected_instructions"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        android:layout_marginTop="21dp"
+        layout="@layout/summary_ingredients" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/summary_total_cost"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/ing_sum"
-        android:layout_below="@+id/ing_sum"
-        android:layout_marginTop="14dp"
-        android:text="@string/ingredientssummary" />
-
-    <TextView
-        android:id="@+id/TextView01"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/ing_sum"
-        android:layout_alignBottom="@+id/ing_sum"
-        android:layout_alignRight="@+id/imageView3"
-        android:text="@string/persons"
-        android:textSize="15sp" />
+        android:layout_alignBottom="@+id/left_arrow"
+        android:layout_alignRight="@+id/selected_dessert"
+        android:layout_marginBottom="14dp"
+        android:text="@string/cost"
+        android:textSize="20sp" />
 
 </RelativeLayout>

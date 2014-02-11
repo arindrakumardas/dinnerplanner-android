@@ -18,34 +18,26 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_column="0"
-        android:layout_gravity="top"
         android:layout_row="0"
         android:text="@string/participants" />
     
     <Spinner
-        android:id="@+id/spinner1"
-        android:layout_width="85dp"
-        android:layout_height="28dp"
+        android:id="@+id/numberOfGuests"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_row="0"
         android:layout_column="1"
         android:prompt="@string/number_of_guests" />
     
     <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_row="0"
-        android:layout_column="2"
-        android:text="@string/cost" />
-
-    <TextView
         android:id="@+id/totalCost"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_row="0"
-        android:layout_column="3"
+        android:layout_column="2"
+        android:layout_columnSpan="2"
         android:layout_gravity="center_horizontal"
-        android:text="@string/sumCost" />
+        android:text="@string/cost" />
 
     
     <TextView
@@ -53,7 +45,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_column="0"
-        android:layout_columnSpan="2"
+        android:layout_columnSpan="4"
         android:layout_row="1"
         android:textSize="24sp"
         android:text="@string/choose_menu" />
@@ -69,40 +61,46 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_column="0"
+        android:layout_columnSpan="4"
         android:layout_row="3"
         android:text="@string/starter"
         android:textSize="12sp" />
     
-    <include layout="@layout/starters"/>
+    <include layout="@layout/starters"
+		android:layout_columnSpan="4"/>
     
     <TextView
         android:id="@+id/MainCourse"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_column="0"
+        android:layout_columnSpan="4"
         android:layout_row="5"
         android:text="@string/main_course" 
         android:textSize="12sp"	/>
 
-    <include layout="@layout/mains"/>
+    <include layout="@layout/mains"
+		android:layout_columnSpan="4"/>
 
     <TextView
         android:id="@+id/Dessert"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_column="0"
+        android:layout_columnSpan="4"
         android:layout_row="7"
         android:text="@string/dessert" 
         android:textSize="12sp"	/>
 
-    <include layout="@layout/desserts"/>
+    <include layout="@layout/desserts"
+		android:layout_columnSpan="4"/>
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/create_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_column="1"
-        android:layout_columnSpan="2"
+        android:layout_column="0"
+        android:layout_columnSpan="4"
         android:layout_row="9"
         android:layout_gravity="center"
         android:text="@string/createbutton" />

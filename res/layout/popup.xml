@@ -7,7 +7,7 @@
     android:orientation="vertical" >
     
  <TextView
-        android:id="@+id/Bakedbrie"
+        android:id="@+id/popupName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
@@ -15,33 +15,30 @@
         android:text="@string/bakedbrie" />
  
   <ImageView
-      android:id="@+id/bakedbrie"
+      android:id="@+id/popupImage"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_below="@+id/Bakedbrie"
+      android:layout_below="@+id/popupName"
       android:layout_marginTop="20dp"
       android:layout_marginLeft="40dp"
       android:src="@drawable/bakedbrie" />
-  
+
   <TextView
-        android:id="@+id/cost"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/Bakedbrie"
-        android:layout_marginLeft="180dp"
-        android:layout_marginTop="20dp"
-        android:text="@string/individual_cost" />
+      android:id="@+id/popupCost"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignBottom="@+id/popupImage"
+      android:layout_marginBottom="45dp"
+      android:layout_toRightOf="@+id/popupImage"
+      android:text="@string/individual_cost" />
 
   <Button
-        android:id="@+id/choosebutton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/bakedbrie"
-        android:layout_centerHorizontal="true"
-         android:layout_marginTop="20dp"
-        android:layout_marginBottom="15dp"
-        android:text="@string/choosebutton" />
-
- 
+      android:id="@+id/popup_choosebutton"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/popupImage"
+      android:layout_centerHorizontal="true"
+      android:layout_marginTop="92dp"
+      android:text="@string/choosebutton" />
 
 </RelativeLayout>

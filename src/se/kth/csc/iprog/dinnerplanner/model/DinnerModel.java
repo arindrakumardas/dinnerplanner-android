@@ -7,6 +7,7 @@ public class DinnerModel implements IDinnerModel {
 	
 
 	Set<Dish> dishes = new HashSet<Dish>();
+	Set<Dish> selectedDishes = new HashSet<Dish>();
 	
 	/**
 	 * TODO: For Lab2 you need to implement the IDinnerModel interface.
@@ -127,6 +128,12 @@ public class DinnerModel implements IDinnerModel {
 		dish6.addIngredient(dish6ing8);
 		dish6.addIngredient(dish6ing9);
 		dishes.add(dish6);
+		
+		//Initiate the default number of guests
+		setNumberOfGuests(4);
+		selectedDishes.add(dish1);
+		selectedDishes.add(dish2);
+		selectedDishes.add(dish5);
 	}
 	
 	/**
@@ -175,7 +182,7 @@ public class DinnerModel implements IDinnerModel {
 
 	@Override
 	public Dish getSelectedDish(int type) {
-		for(Dish dish : getFullMenu()) {
+		for(Dish dish : selectedDishes) {
 			if(dish.getType() == type) {
 				return dish;
 			}
@@ -185,13 +192,13 @@ public class DinnerModel implements IDinnerModel {
 
 	@Override
 	public Set<Dish> getFullMenu() {
-		return dishes;
+		return selectedDishes;
 	}
 
 	@Override
 	public Set<Ingredient> getAllIngredients() {
 		Set<Ingredient> ingredients = new HashSet<Ingredient>();
-		for(Dish dish : dishes) {
+		for(Dish dish : selectedDishes) {
 			ingredients.addAll(dish.getIngredients());
 		}
 		return ingredients;
@@ -201,7 +208,7 @@ public class DinnerModel implements IDinnerModel {
 	public float getTotalMenuPrice() {
 		float price = 0;
 		for(Ingredient ingredient : getAllIngredients()) {
-			price += ingredient.getQuantity()*ingredient.getPrice();
+			price += ingredient.getPrice()*numberOfGuests;
 		}
 		return price;
 	}
