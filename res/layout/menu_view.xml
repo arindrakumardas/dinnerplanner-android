@@ -13,23 +13,6 @@
     android:orientation="vertical" 
     xmlns:android="http://schemas.android.com/apk/res/android">
     
-
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_column="3"
-        android:layout_row="0"
-        android:text="@string/cost" />
-
-    <TextView
-        android:id="@+id/totalCost"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_column="4"
-        android:layout_row="0"
-        android:text="@string/sumCost" />
-
     <TextView
         android:id="@+id/Participants"
         android:layout_width="wrap_content"
@@ -43,10 +26,28 @@
         android:id="@+id/spinner1"
         android:layout_width="85dp"
         android:layout_height="28dp"
-        android:layout_column="1"
         android:layout_row="0"
+        android:layout_column="1"
         android:prompt="@string/number_of_guests" />
+    
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="0"
+        android:layout_column="2"
+        android:text="@string/cost" />
 
+    <TextView
+        android:id="@+id/totalCost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="0"
+        android:layout_column="3"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/sumCost" />
+
+    
     <TextView
         android:id="@+id/ChooseMenu"
         android:layout_width="wrap_content"
@@ -58,10 +59,10 @@
         android:text="@string/choose_menu" />
     
     <View
-    android:layout_width="fill_parent"
-    android:layout_height="1dp"
-    android:background="@android:color/darker_gray"
-    android:layout_columnSpan="4"/>
+    	android:layout_width="fill_parent"
+    	android:layout_height="1dp"
+    	android:background="@android:color/darker_gray"
+    	android:layout_columnSpan="4"/>
 
     <TextView
         android:id="@+id/Starter"
@@ -102,7 +103,6 @@
         android:layout_height="wrap_content"
         android:layout_column="1"
         android:layout_columnSpan="2"
-        android:layout_marginLeft="30dp"
         android:layout_row="9"
         android:layout_gravity="center"
         android:text="@string/createbutton" />
