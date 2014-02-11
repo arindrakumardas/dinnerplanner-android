@@ -35,7 +35,9 @@
         android:layout_below="@+id/instructions"
         android:layout_marginLeft="14dp"
         android:layout_marginTop="26dp"
-        android:src="@drawable/bakedbrie" />
+        android:src="@drawable/redsquare" />
+  
+  <!-- @TODO: return null as req square -->
 
     <ImageView
         android:id="@+id/selected_main"
