@@ -38,8 +38,8 @@ public class SummaryActivity extends Activity {
     	ingredients.setText(sb.toString());
     	// Creating the view class instance
     	SummaryView summaryView = new SummaryView(findViewById(R.id.summary_view), model);
-    	Button createButton = (Button) this.findViewById(R.id.back_button);
-    	createButton.setOnClickListener(new OnClickListener() {
+    	Button backButton = (Button) this.findViewById(R.id.back_button);
+    	backButton.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View arg0) {
 				Intent i = new Intent(SummaryActivity.this, MenuActivity.class);

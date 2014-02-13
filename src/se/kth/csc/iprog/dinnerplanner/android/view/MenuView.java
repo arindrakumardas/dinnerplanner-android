@@ -2,6 +2,8 @@ package se.kth.csc.iprog.dinnerplanner.android.view;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Observable;
+import java.util.Observer;
 
 import se.kth.csc.iprog.dinnerplanner.android.DinnerPlannerApplication;
 import se.kth.csc.iprog.dinnerplanner.android.R;
@@ -23,7 +25,7 @@ import android.widget.ScrollView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-public class MenuView {
+public class MenuView implements Observer{
 
 	View view;
 	int imageSize = 140;
@@ -34,6 +36,8 @@ public class MenuView {
 		this.model = model;
 		// store in the class the reference to the Android View
 		this.view = view;
+		//Subscribe to retrieve notifications when the model is updated.
+		model.addObserver(this);
 
 		// Fill the view of the spinner
 		List<Integer> guestArray = new ArrayList<Integer>();
@@ -106,6 +110,25 @@ public class MenuView {
 			layout.addView(image, imageParams);
 			layout.addView(text, textParams);
 		}
+	}
+
+	@Override
+	public void update(Observable obs, Object o) {
+		if(o instanceof Integer) {
+			int arg = (Integer) o;
+			if(arg == DinnerModel.STARTER) {
+				//Mark the dish as selected (DONT KNOW IF THIS IS NECESSARY)
+			} else if(arg == DinnerModel.MAIN) {
+				//Mark the dish as selected
+			} else if(arg == DinnerModel.DESSERT) {
+				//Mark the dish as selected
+			} if(arg == DinnerModel.GUESTS) {
+				//Update the number of guests in the view
+				Spinner spinner = (Spinner) view.findViewById(R.id.numberOfGuests);
+				spinner.setSelection(model.getNumberOfGuests()-1); //-1 for the index, not the number
+			}
+		}
+		
 	}
 
 }
