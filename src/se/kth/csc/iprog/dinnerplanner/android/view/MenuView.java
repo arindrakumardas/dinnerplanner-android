@@ -9,6 +9,7 @@ import se.kth.csc.iprog.dinnerplanner.android.DinnerPlannerApplication;
 import se.kth.csc.iprog.dinnerplanner.android.R;
 import se.kth.csc.iprog.dinnerplanner.model.DinnerModel;
 import se.kth.csc.iprog.dinnerplanner.model.Dish;
+import android.graphics.Color;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -49,7 +50,7 @@ public class MenuView implements Observer{
 		Spinner spinner = (Spinner) view.findViewById(R.id.numberOfGuests);
 		spinner.setAdapter(numberOfGuestsAdapter);
 		spinner.setOnItemSelectedListener(new OnItemSelectedListener() {
-
+			
 			@Override
 			public void onItemSelected(AdapterView<?> arg0, View arg1,
 					int arg2, long arg3) {
@@ -58,12 +59,8 @@ public class MenuView implements Observer{
 				TextView totalCost = (TextView) view.findViewById(R.id.totalCost);
 				totalCost.setText("Total Cost: " + model.getTotalMenuPrice() + " kr");
 			}
-
 			@Override
-			public void onNothingSelected(AdapterView<?> arg0) {
-				// TODO Auto-generated method stub
-				
-			}
+			public void onNothingSelected(AdapterView<?> arg0) {}
 			
 		});
 		spinner.setSelection(model.getNumberOfGuests()-1); //-1 for the index, not the number
@@ -77,6 +74,10 @@ public class MenuView implements Observer{
 		loadDishesOfType(starters, Dish.STARTER);
 		loadDishesOfType(mains, Dish.MAIN);
 		loadDishesOfType(desserts, Dish.DESERT);
+
+		model.selectDish(model.getSelectedDish(Dish.STARTER));
+		model.selectDish(model.getSelectedDish(Dish.MAIN));
+		model.selectDish(model.getSelectedDish(Dish.DESERT));
 	}
 	
 	/**
@@ -109,6 +110,7 @@ public class MenuView implements Observer{
 			textParams.addRule(RelativeLayout.BELOW, image.getId());
 			layout.addView(image, imageParams);
 			layout.addView(text, textParams);
+			layout.setTag(dish.getName()); //This is used to find the view in the update method when we want to mark it as selected.
 		}
 	}
 
@@ -117,11 +119,18 @@ public class MenuView implements Observer{
 		if(o instanceof Integer) {
 			int arg = (Integer) o;
 			if(arg == DinnerModel.STARTER) {
-				//Mark the dish as selected (DONT KNOW IF THIS IS NECESSARY)
+				//Mark the dish as selected by setting the background color to red.
+				//Maybe put all of this in one method....
+				LinearLayout starters = (LinearLayout) view.findViewById(R.id.starters);
+				updateSelectedDish(starters, arg);
 			} else if(arg == DinnerModel.MAIN) {
-				//Mark the dish as selected
+				//Mark the dish as selected by setting the background color to red.
+				LinearLayout mains = (LinearLayout) view.findViewById(R.id.mains);
+				updateSelectedDish(mains, arg);
 			} else if(arg == DinnerModel.DESSERT) {
-				//Mark the dish as selected
+				//Mark the dish as selected by setting the background color to red.
+				LinearLayout desserts = (LinearLayout) view.findViewById(R.id.desserts);
+				updateSelectedDish(desserts, arg);
 			} if(arg == DinnerModel.GUESTS) {
 				//Update the number of guests in the view
 				Spinner spinner = (Spinner) view.findViewById(R.id.numberOfGuests);
@@ -129,6 +138,28 @@ public class MenuView implements Observer{
 			}
 		}
 		
+	}
+	
+	/**
+	 * Updates the view to show the currently selected dish of the specified type
+	 * @param ll The LinearLayout relevant to update. Either containing starters, main courses or desserts.
+	 * @param type The dish type (starter, main course or dessert).
+	 */
+	private void updateSelectedDish(LinearLayout ll, int type) {
+		for(int i = 0; i < ll.getChildCount(); i++) {
+			View currentChild = ll.getChildAt(i);
+			if(currentChild instanceof RelativeLayout) {
+				RelativeLayout currentLayout = (RelativeLayout) currentChild;
+				Object currentTag = currentLayout.getTag();
+				if(currentTag instanceof String) {
+					//We set this tag when creating the RelativeLayout that contains a meal.
+					String currentString = (String) currentTag;
+					if(model.getSelectedDish(type).getName().equals(currentString)) {
+						currentLayout.setBackgroundColor(Color.rgb(188, 13, 16)); //Should be the same color as the text on the start screen!
+					}
+				}
+			}
+		}
 	}
 
 }

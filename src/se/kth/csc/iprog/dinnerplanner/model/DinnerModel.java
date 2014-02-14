@@ -144,11 +144,11 @@ public class DinnerModel extends Observable implements IDinnerModel{
 	 * @param dish
 	 * @param type can be {@link Dish#STARTER}, {@link Dish#MAIN} or {@link Dish#DESERT}
 	 */
-	public void setDish(Dish dish, int type) {
-		selectedDishes.remove(getSelectedDish(type));
+	public void selectDish(Dish dish) {
+		selectedDishes.remove(getSelectedDish(dish.getType()));
 		selectedDishes.add(dish);
 		setChanged();
-		notifyObservers(type); //Notify which dish was changed.
+		notifyObservers(dish.getType()); //Notify which dish was changed.
 	}
 	
 	/**
