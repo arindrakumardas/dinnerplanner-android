@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/RelativeLayout1"
+    android:id="@+id/popup"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
@@ -36,9 +36,18 @@
       android:id="@+id/popup_choosebutton"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_below="@+id/popupImage"
-      android:layout_centerHorizontal="true"
-      android:layout_marginTop="92dp"
+      android:layout_alignLeft="@+id/popupImage"
+      android:layout_alignParentBottom="true"
+      android:layout_marginBottom="92dp"
       android:text="@string/choosebutton" />
+
+  <Button
+      android:id="@+id/popup_cancelbutton"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignBaseline="@+id/popup_choosebutton"
+      android:layout_alignBottom="@+id/popup_choosebutton"
+      android:layout_alignLeft="@+id/popupCost"
+      android:text="@string/cancelbutton" />
 
 </RelativeLayout>
