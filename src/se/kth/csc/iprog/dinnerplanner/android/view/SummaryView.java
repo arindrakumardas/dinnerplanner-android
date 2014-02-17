@@ -30,7 +30,9 @@ public class SummaryView implements Observer {
 		insertImage(model.getSelectedDish(Dish.STARTER), (ImageView) view.findViewById(R.id.selected_starter));
 		insertImage(model.getSelectedDish(Dish.MAIN), (ImageView) view.findViewById(R.id.selected_main));
 		insertImage(model.getSelectedDish(Dish.DESERT), (ImageView) view.findViewById(R.id.selected_dessert));
-
+		view.findViewById(R.id.selected_starter).setClickable(true);
+		view.findViewById(R.id.selected_main).setClickable(true);
+		view.findViewById(R.id.selected_dessert).setClickable(true);
 	}
 	
 	/**
@@ -42,6 +44,7 @@ public class SummaryView implements Observer {
 			image.setImageResource(imgID);
 			image.getLayoutParams().height = 120;
 			image.getLayoutParams().width = 120;
+
 	}
 
 	@Override
