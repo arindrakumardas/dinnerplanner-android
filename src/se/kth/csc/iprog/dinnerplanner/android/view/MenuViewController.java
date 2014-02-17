@@ -1,7 +1,6 @@
 package se.kth.csc.iprog.dinnerplanner.android.view;
 
 import android.app.Dialog;
-import android.graphics.Color;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
@@ -12,7 +11,6 @@ import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.AdapterView.OnItemSelectedListener;
-import se.kth.csc.iprog.dinnerplanner.android.DinnerPlannerApplication;
 import se.kth.csc.iprog.dinnerplanner.android.R;
 import se.kth.csc.iprog.dinnerplanner.model.DinnerModel;
 import se.kth.csc.iprog.dinnerplanner.model.Dish;
@@ -95,7 +93,7 @@ public class MenuViewController implements OnClickListener {
 						break;
 					}
 				}
-				final Dish dish = currentDish; //Should always be initialized.
+				final Dish dish = currentDish; //Should always be initialised.
 				
 				//Add listener to the Choose button
 				Button chooseBtn = (Button) dialog.findViewById(R.id.popup_choosebutton);
@@ -147,7 +145,7 @@ public class MenuViewController implements OnClickListener {
 					}
 				}
 				
-//				if(currentTag instanceof String) {
+//				if(currentTag instance of String) {
 //					//We set this tag when creating the RelativeLayout that contains a meal.
 //					String currentString = (String) currentTag;
 //					if(model.getSelectedDish(type).getName().equals(currentString)) {

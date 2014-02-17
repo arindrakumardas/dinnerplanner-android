@@ -34,27 +34,35 @@ public class SummaryViewController implements OnClickListener {
 	}
 	@Override
 	public void onClick(View v) {
-		// TODO Put listeners for the imageViews or the RelativeLayout containing dish image/names
-		System.err.println("clicked");
-		if (v == findViewById(R.id.selected_instructions)){
-			TextView ingredients = (TextView) findViewById(R.id.selected_instructions);
+		// Put listeners for the imageViews or the RelativeLayout containing dish image/names
+		
+
+	if (v == findViewById(R.id.selected_instructions)){
+		System.err.println("clicked_ingredients");
+/*			TextView ingredients = (TextView) findViewById(R.id.selected_instructions);
 			StringBuilder sb = new StringBuilder();
 			for(Ingredient i : model.getAllIngredients()) {
 	    		sb.append(i.getName()).append("    ").append(i.getQuantity()).append(" ").append(i.getUnit()).append("\n");
 	    	}
-			ingredients.setText(sb.toString());
+			ingredients.setText(sb.toString());*/
 		}
+
 		if (v == findViewById(R.id.selected_starter)){
-			TextView description = new TextView(view.view.getContext());
-			description.setText(dish.description);
+			System.err.println("clicked_starter");
+			TextView instructions = (TextView) findViewById(R.id.instructions);
+			instructions.setText(dish.getDescription());
+//			TextView description = new TextView(view.view.getContext());
+//			description.setText(dish.description);
 		}
 		if (v == findViewById(R.id.selected_main)){
-			TextView description = new TextView(view.view.getContext());
-			description.setText(dish.description);
+			System.err.println("clicked_main");
+//			TextView description = new TextView(view.view.getContext());
+//			description.setText(dish.description);
 		}
 		if (v == findViewById(R.id.selected_dessert)){
-			TextView description = new TextView(view.view.getContext());
-			description.setText(dish.description);
+			System.err.println("clicked_dessert");
+//			TextView description = new TextView(view.view.getContext());
+//			description.setText(dish.description);
 		}
 	}
 	
