@@ -142,6 +142,8 @@ public class MenuView implements Observer{
 					String currentString = (String) currentTag;
 					if(model.getSelectedDish(type).getName().equals(currentString)) {
 						currentLayout.setBackgroundColor(Color.rgb(188, 13, 16)); //Should be the same color as the text on the start screen!
+					} else {
+						currentLayout.setBackgroundColor(Color.WHITE);
 					}
 				}
 			}
