@@ -1,5 +1,6 @@
 package se.kth.csc.iprog.dinnerplanner.android.view;
 
+import android.view.Gravity;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
@@ -18,6 +19,7 @@ public class SummaryViewController implements OnClickListener {
 
 	DinnerModel model;
 	SummaryView view;
+	Dish dish;
 	
 	public SummaryViewController(final DinnerModel model, final SummaryView view) {
 		this.model = model;
@@ -26,11 +28,9 @@ public class SummaryViewController implements OnClickListener {
 		findViewById(R.id.selected_starter).setOnClickListener(this);
 		findViewById(R.id.selected_main).setOnClickListener(this);
 		findViewById(R.id.selected_dessert).setOnClickListener(this);
+		
+		
 
-		StringBuilder sb = new StringBuilder();
-		for(Ingredient i : model.getAllIngredients()) {
-    		sb.append(i.getName()).append("    ").append(i.getQuantity()).append(" ").append(i.getUnit()).append("\n");
-    	}
 	}
 	@Override
 	public void onClick(View v) {
@@ -38,19 +38,23 @@ public class SummaryViewController implements OnClickListener {
 		System.err.println("clicked");
 		if (v == findViewById(R.id.selected_instructions)){
 			TextView ingredients = (TextView) findViewById(R.id.selected_instructions);
+			StringBuilder sb = new StringBuilder();
+			for(Ingredient i : model.getAllIngredients()) {
+	    		sb.append(i.getName()).append("    ").append(i.getQuantity()).append(" ").append(i.getUnit()).append("\n");
+	    	}
 			ingredients.setText(sb.toString());
 		}
 		if (v == findViewById(R.id.selected_starter)){
-			TextView description = (TextView) findViewById(R.id.instructions);
-			description.setText(sb.toString());
+			TextView description = new TextView(view.view.getContext());
+			description.setText(dish.description);
 		}
 		if (v == findViewById(R.id.selected_main)){
-			TextView description = (TextView) findViewById(R.id.instructions);
-			description.setText(sb.toString());
+			TextView description = new TextView(view.view.getContext());
+			description.setText(dish.description);
 		}
 		if (v == findViewById(R.id.selected_dessert)){
-			TextView description = (TextView) findViewById(R.id.instructions);
-			description.setText(sb.toString());
+			TextView description = new TextView(view.view.getContext());
+			description.setText(dish.description);
 		}
 	}
 	

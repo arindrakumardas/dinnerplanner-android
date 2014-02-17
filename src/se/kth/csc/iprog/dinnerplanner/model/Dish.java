@@ -12,7 +12,7 @@ public class Dish {
 	String name;
 	int type; // starter (1), main (2) or desert (3)  
 	String image;
-	String description;
+	public String description;
 	
 	Set<Ingredient> ingredients = new HashSet<Ingredient>();
 	

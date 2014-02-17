@@ -27,6 +27,7 @@ public class MenuActivity extends Activity {
     	// Creating the view class instance
     	MenuView menuView = new MenuView(findViewById(R.id.menu_view), model);
     	MenuViewController menuCtrl = new MenuViewController(model, menuView);
+    	
     	Button createButton = (Button) this.findViewById(R.id.create_button);
     	createButton.setOnClickListener(new OnClickListener() {
 			@Override

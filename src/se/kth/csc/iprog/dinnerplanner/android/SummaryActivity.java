@@ -1,7 +1,9 @@
 package se.kth.csc.iprog.dinnerplanner.android;
 
 import se.kth.csc.iprog.dinnerplanner.android.view.MenuView;
+import se.kth.csc.iprog.dinnerplanner.android.view.MenuViewController;
 import se.kth.csc.iprog.dinnerplanner.android.view.SummaryView;
+import se.kth.csc.iprog.dinnerplanner.android.view.SummaryViewController;
 import se.kth.csc.iprog.dinnerplanner.model.DinnerModel;
 import se.kth.csc.iprog.dinnerplanner.model.Ingredient;
 import android.os.Bundle;
@@ -38,6 +40,8 @@ public class SummaryActivity extends Activity {
     	ingredients.setText(sb.toString());
     	// Creating the view class instance
     	SummaryView summaryView = new SummaryView(findViewById(R.id.summary_view), model);
+    	SummaryViewController summaryCtrl = new SummaryViewController(model, summaryView);
+    	
     	Button backButton = (Button) this.findViewById(R.id.back_button);
     	backButton.setOnClickListener(new OnClickListener() {
 			@Override
