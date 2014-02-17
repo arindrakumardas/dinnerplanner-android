@@ -49,21 +49,6 @@ public class MenuView implements Observer{
 				android.R.layout.simple_spinner_item, guestArray);
 		Spinner spinner = (Spinner) view.findViewById(R.id.numberOfGuests);
 		spinner.setAdapter(numberOfGuestsAdapter);
-		spinner.setOnItemSelectedListener(new OnItemSelectedListener() {
-			
-			@Override
-			public void onItemSelected(AdapterView<?> arg0, View arg1,
-					int arg2, long arg3) {
-				int num = (Integer) arg0.getSelectedItem();
-				model.setNumberOfGuests(num); //Update the number of guests in the model
-				TextView totalCost = (TextView) view.findViewById(R.id.totalCost);
-				totalCost.setText("Total Cost: " + model.getTotalMenuPrice() + " kr");
-			}
-			@Override
-			public void onNothingSelected(AdapterView<?> arg0) {}
-			
-		});
-		spinner.setSelection(model.getNumberOfGuests()-1); //-1 for the index, not the number
 		
 		// Setup the dishes
 		LinearLayout starters = (LinearLayout) view.findViewById(R.id.starters);
@@ -151,6 +136,7 @@ public class MenuView implements Observer{
 			if(currentChild instanceof RelativeLayout) {
 				RelativeLayout currentLayout = (RelativeLayout) currentChild;
 				Object currentTag = currentLayout.getTag();
+				
 				if(currentTag instanceof String) {
 					//We set this tag when creating the RelativeLayout that contains a meal.
 					String currentString = (String) currentTag;

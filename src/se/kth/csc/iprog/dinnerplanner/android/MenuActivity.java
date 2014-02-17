@@ -1,6 +1,7 @@
 package se.kth.csc.iprog.dinnerplanner.android;
 
 import se.kth.csc.iprog.dinnerplanner.android.view.MenuView;
+import se.kth.csc.iprog.dinnerplanner.android.view.MenuViewController;
 import se.kth.csc.iprog.dinnerplanner.model.DinnerModel;
 import android.os.Bundle;
 import android.view.View;
@@ -25,6 +26,7 @@ public class MenuActivity extends Activity {
     	
     	// Creating the view class instance
     	MenuView menuView = new MenuView(findViewById(R.id.menu_view), model);
+    	MenuViewController menuCtrl = new MenuViewController(model, menuView);
     	Button createButton = (Button) this.findViewById(R.id.create_button);
     	createButton.setOnClickListener(new OnClickListener() {
 			@Override
