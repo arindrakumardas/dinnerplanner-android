@@ -45,24 +45,21 @@
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_alignTop="@+id/selected_starter"
-        android:layout_toRightOf="@+id/selected_starter"
-        android:src="@drawable/meatballs" />
+        android:layout_toRightOf="@+id/selected_starter"	/>
 
     <ImageView
         android:id="@+id/selected_dessert"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_alignTop="@+id/selected_main"
-        android:layout_toRightOf="@+id/selected_main"
-        android:src="@drawable/toast" />
+        android:layout_toRightOf="@+id/selected_main"	/>
 
     <ImageView
         android:id="@+id/selected_starter"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_alignTop="@+id/selected_instructions"
-        android:layout_centerHorizontal="true"
-        android:src="@drawable/bakedbrie" />
+        android:layout_centerHorizontal="true"	/>
 
     <include
         android:id="@+id/include1"
@@ -81,7 +78,6 @@
         android:layout_alignBaseline="@+id/back_button"
         android:layout_alignBottom="@+id/back_button"
         android:layout_alignRight="@+id/include1"
-        android:text="@string/cost"
         android:textSize="20sp" />
 
 </RelativeLayout>

@@ -32,12 +32,13 @@ public class SummaryActivity extends Activity {
 		totalCost.setText("Total Cost: " + model.getTotalMenuPrice() + " kr");
     	TextView numGuests = (TextView) findViewById(R.id.summary_num_guests);
     	numGuests.setText(model.getNumberOfGuests() + " persons");
-    	TextView ingredients = (TextView) findViewById(R.id.selected_ingredients_summary);
+    	
+    	TextView description = (TextView) findViewById(R.id.selected_ingredients_summary);
     	StringBuilder sb = new StringBuilder();
     	for(Ingredient i : model.getAllIngredients()) {
     		sb.append(i.getName()).append("    ").append(i.getQuantity()).append(" ").append(i.getUnit()).append("\n");
     	}
-    	ingredients.setText(sb.toString());
+    	description.setText(sb.toString());
     	// Creating the view class instance
     	SummaryView summaryView = new SummaryView(findViewById(R.id.summary_view), model);
     	SummaryViewController summaryCtrl = new SummaryViewController(model, summaryView);
