@@ -5,10 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
-    
+
     <!-- @TODO: the position of "total cost" and "ingredients" should change according to content -->
 
-   <!--    android:layout_above=""	-->
+
+    <!-- android:layout_above="" -->
 
     <Button
         android:id="@+id/back_button"
@@ -30,13 +31,13 @@
         android:id="@+id/selected_instructions"
         android:layout_width="60dp"
         android:layout_height="60dp"
-		android:gravity="left"
         android:layout_below="@+id/instructions"
         android:layout_marginLeft="14dp"
         android:layout_marginTop="26dp"
+        android:gravity="left"
         android:src="@drawable/ingredients" />
-  
-  <!-- @TODO: return null as req square -->
+
+    <!-- @TODO: return null as req square -->
 
     <ImageView
         android:id="@+id/selected_main"
@@ -63,6 +64,7 @@
         android:src="@drawable/bakedbrie" />
 
     <include
+        android:id="@+id/include1"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_below="@+id/selected_instructions"
@@ -81,5 +83,12 @@
         android:text="@string/cost"
         android:textSize="20sp" />
 
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_alignLeft="@+id/include1"
+        android:layout_alignRight="@+id/selected_dessert"
+        android:layout_alignTop="@+id/include1"
+        android:background="@android:color/darker_gray" />
 
 </RelativeLayout>
