@@ -33,14 +33,6 @@
       android:text="@string/individual_cost" />
 
   <Button
-      android:id="@+id/popup_cancelbutton"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_alignParentRight="true"
-      android:layout_alignParentTop="true"
-      android:text="@string/cancelbutton" />
-
-  <Button
       android:id="@+id/popup_choosebutton"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
@@ -48,5 +40,14 @@
       android:layout_below="@+id/popupImage"
       android:layout_marginTop="38dp"
       android:text="@string/choosebutton" />
+
+  <Button
+      android:id="@+id/popup_cancelbutton"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignBottom="@+id/popupName"
+      android:layout_alignParentRight="true"
+      android:layout_marginRight="18dp"
+      android:text="@string/cancelbutton" />
 
 </RelativeLayout>
