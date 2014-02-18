@@ -40,9 +40,6 @@ public class SummaryViewController implements OnClickListener {
 
 		if (v == findViewById(R.id.selected_starter)){
 			description.setText("starter");
-/* The problem is here	*
- * We need to load getDescription() from model.dish, but it crashes when I call it	*			
- */			
 //			description.setText(dish.getDescription());
 		}
 		if (v == findViewById(R.id.selected_main)){
