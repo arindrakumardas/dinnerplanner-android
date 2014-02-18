@@ -17,7 +17,6 @@ public class SummaryViewController implements OnClickListener {
 	public SummaryViewController(final DinnerModel model, final SummaryView view) {
 		this.model = model;
 		this.view = view;
-		this.dish = dish;
 		
 		findViewById(R.id.selected_instructions).setOnClickListener(this);
 		findViewById(R.id.selected_starter).setOnClickListener(this);
@@ -41,7 +40,7 @@ public class SummaryViewController implements OnClickListener {
 
 		if (v == findViewById(R.id.selected_starter)){
 			description.setText("starter");
-//			description.setText(dish.description);
+//			description.setText(dish.getDescription());
 		}
 		if (v == findViewById(R.id.selected_main)){
 			description.setText("main");
