@@ -22,7 +22,7 @@ public class SummaryViewController implements OnClickListener {
 		findViewById(R.id.selected_starter).setOnClickListener(this);
 		findViewById(R.id.selected_main).setOnClickListener(this);
 		findViewById(R.id.selected_dessert).setOnClickListener(this);
-
+		
 	}
 	
 	@Override
@@ -40,16 +40,17 @@ public class SummaryViewController implements OnClickListener {
 
 		if (v == findViewById(R.id.selected_starter)){
 			description.setText("starter");
-//			description.setText(dish.getDescription());
+			
+		/* The next line causes the crash: */
+			description.setText(dish.getDescription());
+		
 		}
 		if (v == findViewById(R.id.selected_main)){
 			description.setText("main");
-//			TextView description = new TextView(view.view.getContext());
 //			description.setText(dish.description);
 		}
 		if (v == findViewById(R.id.selected_dessert)){
 			description.setText("dessert");
-//			TextView description = new TextView(view.view.getContext());
 //			description.setText(dish.description);
 		}
 	}
