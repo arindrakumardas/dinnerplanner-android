@@ -30,7 +30,9 @@
       android:layout_alignBottom="@+id/popupImage"
       android:layout_marginBottom="45dp"
       android:layout_toRightOf="@+id/popupImage"
-      android:text="@string/individual_cost" />
+      android:gravity="center"
+      android:text="@string/individual_cost"
+       />
 
   <Button
       android:id="@+id/popup_choosebutton"
@@ -49,5 +51,13 @@
       android:layout_alignParentRight="true"
       android:layout_marginRight="18dp"
       android:text="@string/cancelbutton" />
+
+  <View
+      android:layout_width="wrap_content"
+      android:layout_height="1dp"
+      android:layout_alignLeft="@+id/popupImage"
+      android:layout_alignRight="@+id/popup_cancelbutton"
+      android:layout_below="@+id/popupName"
+      android:background="@android:color/darker_gray" />
 
 </RelativeLayout>

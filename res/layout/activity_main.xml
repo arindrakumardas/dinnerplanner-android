@@ -13,19 +13,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="left"
-        android:textColor="#BC0D10"
-        android:textSize="24sp"
-        android:text="@string/welcome" />
+        android:text="@string/welcome"
+        android:textColor="#000000"
+        android:textSize="24sp" />
     
     <TextView
         android:id="@+id/example_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="left"
         android:layout_below="@id/welcome_text"
-        android:textColor="#BC0D10"
-        android:textSize="18sp"
-        android:text="@string/start_string" />
+        android:gravity="left"
+        android:text="@string/start_string"
+        android:textColor="#000000"
+        android:textSize="18sp" />
     
     <Button
         android:id="@+id/start_button"
