@@ -75,9 +75,10 @@
         android:id="@+id/summary_total_cost"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
         android:layout_alignBaseline="@+id/back_button"
         android:layout_alignBottom="@+id/back_button"
-        android:layout_alignRight="@+id/include1"
+        android:paddingRight="14dp"
         android:textSize="20sp" />
 
     <View
