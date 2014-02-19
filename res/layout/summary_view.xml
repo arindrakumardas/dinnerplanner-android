@@ -62,7 +62,7 @@
         android:layout_centerHorizontal="true"	/>
 
     <include
-        android:id="@+id/include1"
+        android:id="@+id/summary_include"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_below="@+id/selected_instructions"
