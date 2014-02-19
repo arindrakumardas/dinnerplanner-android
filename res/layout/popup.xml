@@ -46,10 +46,11 @@
   <Button
       android:id="@+id/popup_cancelbutton"
       android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_alignBottom="@+id/popupName"
+      android:layout_height="50sp"
+      android:layout_alignParentTop="true"
       android:layout_alignParentRight="true"
-      android:layout_marginRight="18dp"
+      android:paddingRight="18dp"
+      android:paddingTop="18dp"
       android:text="@string/cancelbutton" />
 
   <View
